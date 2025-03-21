@@ -87,7 +87,7 @@ This project automates the following process:
      - `contract_address = "CTADRESS"` with the contract address from Remix.
      - `private_key='PRIVATE_KEY'` with the private key of a funded Ganache account (e.g., from Ganache UI/CLI).
 3. **Check the Image Folder Path**:
-   - Default is `image_folder = "C:/CodeJaai/NEWCARBON/Images"`. If your receipts are stored elsewhere, update the path.
+   - Default is `image_folder = "NEWCARBON/Images"`. If your receipts are stored elsewhere, update the path.
 4. **Run the script**:
    ```bash
    python Eureka.py
@@ -109,11 +109,11 @@ This project automates the following process:
 
 ## Frontend Setup (BC-Carbon\project)
 
-Inside the folder `C:\CodeJaai\NEWCARBON\BC-Carbon\project`, you’ll find a basic React/Next.js application for viewing or interacting with the on-chain data.
+Inside the folder `\NEWCARBON\BC-Carbon\project`, you’ll find a basic React/Next.js application for viewing or interacting with the on-chain data.
 
 1. **Install Dependencies**:
    ```bash
-   cd C:\CodeJaai\NEWCARBON\BC-Carbon\project
+   cd \BC-Carbon\project
    npm install
    ```
 2. **Start the Development Server**:
