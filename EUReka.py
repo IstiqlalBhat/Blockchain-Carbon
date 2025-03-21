@@ -6,7 +6,7 @@ import json
 from web3 import Web3
 
 # API Key and Ganache settings
-api_key = "OpenAI API Key"
+api_key = "Enter OpenAI key here"
 ganache_url = "http://127.0.0.1:7545"
 web3 = Web3(Web3.HTTPProvider(ganache_url))
 
@@ -27,12 +27,12 @@ if not web3.is_connected():
     print("Failed to connect to Ganache")
     exit()
 
-contract_address = "CTADRESS"
+contract_address = "Contract Address"
 contract = web3.eth.contract(address=contract_address, abi=contract_abi)
 web3.eth.default_account = web3.eth.accounts[0]
 
 # Process images
-image_folder = "C:/CodeJaai/NEWCARBON/Images"
+image_folder = "C:/CodeJaai/NEWCARBON/BC-Carbon/Images"
 for image_name in os.listdir(image_folder):
     image_path = os.path.join(image_folder, image_name)
     if not os.path.isfile(image_path) or not image_path.endswith(('.png', '.jpg', '.jpeg')):
@@ -144,7 +144,7 @@ Rules:
         })
 
         # Sign and send transaction
-        signed_tx = web3.eth.account.sign_transaction(tx, private_key='PRIVATE_KEY')
+        signed_tx = web3.eth.account.sign_transaction(tx, private_key='Private Key')
         tx_hash = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
         
         # Wait for transaction receipt
